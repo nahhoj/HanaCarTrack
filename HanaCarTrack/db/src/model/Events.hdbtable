@@ -1,0 +1,13 @@
+COLUMN TABLE "com.co.johan.model::Events" (
+    IDEvent         Integer,
+    "Database"      nvarchar(2),
+    IDUnit         nvarchar(5),
+    IP              nvarchar(20),
+    Date            DATE,
+    Time            TIME,
+    Latitude        Double,
+    Longitude       Double,
+    Altitude        Double,
+    Speed           Double,
+    primary key (IDEvent,"Database")
+)

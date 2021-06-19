@@ -1,0 +1,37 @@
+_schema-version: "3.2"
+ID: HanaCarTrack
+version: 0.0.1
+
+
+modules:
+- name: db
+  type: hdb
+  path: db
+  requires:
+  - name: hdi_db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
+
+
+resources:
+- name: hdi_db
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      schema: hana_car_track
+    service-name: hana_car_track
+  properties:
+    hdi-container-name: ${service-name}
+
+- name: cross-container-service-1
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: grant-service
+  properties:
+    the-service-name: ${service-name}

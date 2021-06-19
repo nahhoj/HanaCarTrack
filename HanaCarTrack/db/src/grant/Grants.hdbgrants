@@ -1,0 +1,48 @@
+{
+  "grant-service": {
+    "object_owner": {
+      "global_object_privileges" : [
+        {
+          "name" : "SAPHANA",
+          "type" : "REMOTE SOURCE",
+          "privileges" : [
+              "CREATE VIRTUAL TABLE",
+              "CREATE VIRTUAL FUNCTION",
+              "CREATE REMOTE SUBSCRIPTION",
+              "ALTER",
+              "DROP" ]
+        },
+        {
+          "name" : "POSTGRES",
+          "type" : "REMOTE SOURCE",
+           "privileges" : [
+              "CREATE VIRTUAL TABLE",
+              "CREATE VIRTUAL FUNCTION",
+              "CREATE REMOTE SUBSCRIPTION",
+              "ALTER",
+              "DROP" ]
+        }
+      ]
+    },
+    "application_user": {
+      "global_object_privileges" : [
+        {
+          "name" : "SAPHANA",
+          "type" : "REMOTE SOURCE",
+          "privileges" : [
+              "CREATE VIRTUAL TABLE",
+              "CREATE VIRTUAL FUNCTION",
+              "ALTER","DROP" ]
+        },
+        {
+          "name" : "POSTGRES",
+          "type" : "REMOTE SOURCE",
+           "privileges" : [
+              "CREATE VIRTUAL TABLE",
+              "CREATE VIRTUAL FUNCTION",
+              "ALTER","DROP" ]
+        }
+      ]
+    }
+  }
+}

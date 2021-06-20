@@ -13,7 +13,7 @@ type Response struct {
 	Response   []byte
 }
 
-func callService(urlString string, method string, headers map[string][]string, body string) Response {
+func CallService(urlString string, method string, headers map[string][]string, body string) Response {
 	urlParse, _ := url.Parse(urlString)
 	req := http.Request{
 		Method: method,

@@ -1,5 +1,5 @@
 /HanaCarTrack_MTA/mta_archives/
 /HanaCarTrack_MTA/db/node_modules/
-#/HanaCarTrack_GO_Simulator/.env
+/HanaCarTrack_GO_Simulator/.env
 # auto generated wildcard
 HanaCarTrack/db/.env

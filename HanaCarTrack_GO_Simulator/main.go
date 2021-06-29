@@ -57,8 +57,10 @@ func main() {
 	}
 	defer connection.Close()
 	for _, steps := range data.Routes[0].Legs[0].Steps {
-		send := fmt.Sprintln(idunit, ip, steps.StartLocation.Lat, steps.StartLocation.Lng, nil, rand.Intn(100))
+		date := time.Now()
+		send := fmt.Sprintf("%s,%s,%s,%s,%f,%f,%d,%d", idunit, ip, date.Format("2006-01-02"), date.Format("15:04:05"), steps.StartLocation.Lat, steps.StartLocation.Lng, 0, rand.Intn(100))
 		_, err = connection.Write([]byte(send))
+		fmt.Println(send)
 		if err != nil {
 			fmt.Println(err)
 			return
